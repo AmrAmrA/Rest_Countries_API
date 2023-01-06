@@ -1,2 +1,31 @@
-@import '__reset.scss'; 
-@import '__variables.scss'; 
+@import "__reset.scss";
+@import "__variables.scss";
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: $VeryLightGray;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px 20px 40px;
+  background-color: $white;
+  box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.65);
+
+  &__catchPhrase {
+    font-weight: 900;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  &__darkMode {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 120px;
+  }
+}
+
+@import "__queries.scss";

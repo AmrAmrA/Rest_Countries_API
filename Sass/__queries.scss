@@ -1,0 +1,15 @@
+@media screen and (max-width: 485px) {
+  .header {
+    padding: 20px 8px 20px 8px;
+    height: 80px;
+
+    &__catchPhrase {
+      font-weight: 900;
+      text-align: center;
+      font-size: 16px;
+    }
+    &__darkMode {
+      width: 100px;
+    }
+  }
+}
