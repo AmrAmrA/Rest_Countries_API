@@ -14,7 +14,7 @@ a {
 }
 
 a:visited {
-  color: black;
+  color: white;
 }
 
 body {
@@ -63,35 +63,32 @@ body {
   margin-right: 10px;
 }
 
-.countryFlag {
-  width: 500px;
-}
-.countryFlag__photo {
-  width: 100%;
-}
-
 .countryBlock {
   display: flex;
   justify-content: space-between;
+  margin-top: 35px;
+}
+.countryBlock .countryFlag {
+  width: 500px;
+}
+.countryBlock .countryFlag__photo {
+  width: 100%;
 }
 
 .countryInformations {
   display: flex;
 }
-
-h1 {
-  margin-bottom: 25px;
-}
-
-.secondBlock {
+.countryInformations .secondBlock {
   margin-top: 45px;
 }
-
-.firstBlock p, .secondBlock p {
+.countryInformations .secondBlock h1 {
+  margin-bottom: 25px;
+}
+.countryInformations .firstBlock p,
+.countryInformations .secondBlock p {
   margin-bottom: 12px;
 }
-
-.thirdBlock {
+.countryInformations .thirdBlock {
   margin-top: 80px;
 }
 

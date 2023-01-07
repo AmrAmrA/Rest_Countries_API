@@ -18,7 +18,6 @@ const DisplayCountries = async () => {
   await getCountries();
   for (let i = 0; i < countryData.length; i++) {
     const countriesSection = document.createElement("section");
-    console.log(countryData[i].capital[0]);
     
     countriesSection.innerHTML = `
          <a href="country.html?id=${countryData[i].name.common}">
@@ -43,9 +42,9 @@ DisplayCountries();
 let darkMode = document.querySelector(".darkMode");
 let body = document.querySelector("body");
 let countryCard = document.querySelectorAll(".countryCard");
+let countryInformations = document.querySelectorAll('.countryInformations')
+console.log(countryInformations);
 
-console.log(body);
-console.log(mainPart.children);
 
 darkMode.addEventListener("click", () => {
   body.classList.toggle("darkMode");
