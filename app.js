@@ -1,6 +1,6 @@
 let mainPart = document.querySelector("main");
 let countryData = [];
-const getcountry = async () => {
+const getCountries = async () => {
   try {
     const res = await fetch(`https://restcountries.com/v3.1/all`);
     countryData = await res.json();
@@ -15,14 +15,15 @@ const getcountry = async () => {
 };
 
 const DisplayCountries = async () => {
-  await getcountry();
-  console.log(countryData);
+  await getCountries();
   for (let i = 0; i < countryData.length; i++) {
     const countriesSection = document.createElement("section");
-
+    console.log(countryData[i].capital[0]);
+    
     countriesSection.innerHTML = `
+         <a href="country.html?id=${countryData[i].name.common}">
          <article class="countryCard">
-         <img src="${countryData[i].flags.png}" alt="German flag" class="countryCard__flag">
+         <img src="${countryData[i].flags.png}" alt="${countryData[i].name.common} flag" class="countryCard__flag">
          <div class="countryInformations">
            <p class="countryInformations__name"> ${countryData[i].name.common}</p>
            <p class="countryInformations__population"><b>population </b> :  ${countryData[i].population}</p>
@@ -30,6 +31,7 @@ const DisplayCountries = async () => {
            <p class="countryInformations__capital"> <b> Capital </b> : ${countryData[i].capital}</p>
          </div>
        </article>
+       </a>
          `;
 
     mainPart.appendChild(countriesSection);
