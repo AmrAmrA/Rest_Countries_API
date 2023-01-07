@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="styles/country.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fonteawsome Library  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
-<script src='country.js'></script>
+  </head>
+  <body>
+    <header class="header">
+      <p class="header__catchPhrase">Where in the world ?</p>
+      <div class="header__darkMode darkMode">
+        <i class="fa-regular fa-moon darkMode__icon"></i>
+        <p class="darkMode__text">Dark Mode</p>
+      </div>
+    </header>
+
+    <main class="main">
+        <button class="main__back">
+            <div class="arrow">
+                <i class="fa-solid fa-arrow-left-long"></i>
+            </div>
+            <p class="back">Back</p>
+        </button>
+
+        <section class="countryBlock">
+            <article class="countryFlag">
+                <img src="/Flag_of_Belgium.svg.png" alt=" Belgium flag" class="countryFlag__photo">
+            </article>
+
+
+
+
+            <article class="countryInformations">
+                <div class="firstBlock">
+                    <h1 class="firstBlock__title">Belgium</h1>
+                     <p class="firstBlock__name">Native Name : Belgie</p>
+                     <p class="firstBlock__population">Population : 11.319.511</p>
+                     <p class="firstBlock__region">Region : Europe</p>
+                     <p class="firstBlock__subRegion">Sub Region :Western Europe</p>
+                     <p class="firstBlock__capital">Capital : Brussels</p>
+                     <div class="thirdBlock">
+                         <p class="thirdBlock__border">Border Countries : France, Germany, Netherlands</p>
+                     </div>
+                </div>
+                <div class="secondBlock">
+                     <p class="secondBlock__capital">Top Level Domain : .be</p>
+                     <p class="secondBlock__name">Currencies : Euro</p>
+                     <p class="secondBlock__population">Languages : Dutch, French, German</p>
+                </div>
+            </article>
+        </section>
+    </main>
+  </body>
+  <script src="country.js"></script>
 </html>

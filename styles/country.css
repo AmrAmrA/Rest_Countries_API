@@ -1,0 +1,113 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #fafafa;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px 20px 40px;
+  background-color: #ffffff;
+  box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.65);
+}
+.header__catchPhrase {
+  font-weight: 900;
+  text-align: center;
+  font-size: 22px;
+}
+.header__darkMode {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 120px;
+  cursor: pointer;
+}
+
+.main {
+  margin: 50px 5% 0px 5%;
+}
+.main__back {
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0px 3px 1px 4px rgba(0, 0, 0, 0.71);
+}
+.main__back .arrow {
+  margin-right: 10px;
+}
+
+.countryFlag {
+  width: 500px;
+}
+.countryFlag__photo {
+  width: 100%;
+}
+
+.countryBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.countryInformations {
+  display: flex;
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+.secondBlock {
+  margin-top: 45px;
+}
+
+.firstBlock p, .secondBlock p {
+  margin-bottom: 12px;
+}
+
+.thirdBlock {
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 485px) {
+  .header {
+    padding: 20px 8px 20px 8px;
+    height: 80px;
+  }
+  .header__catchPhrase {
+    font-weight: 900;
+    text-align: center;
+    font-size: 16px;
+  }
+  .header__darkMode {
+    width: 100px;
+  }
+}
+
+/*# sourceMappingURL=country.css.map */
