@@ -20,8 +20,12 @@ const DisplayCountries = async () => {
   await getOneCountry();
     for (let i = 0; i < oneCountryData.length; i++) {
       const OneCountrySection = document.createElement("section");
-      ;
-      
+      // console.log(oneCountryData[0].languages);
+      let langues = []; 
+      langues = {...oneCountryData[0].languages};
+      for (lang in langues) {
+        console.log(`langue:  ${langues[lang]}`)
+      }
      OneCountrySection.innerHTML = `
               <article class="countryFlag">
                 <img src="${oneCountryData[0].flags.png}" alt=" Belgium flag" class="countryFlag__photo">
@@ -40,7 +44,7 @@ const DisplayCountries = async () => {
                 <div class="secondBlock">
                      <p class="secondBlock__capital">Top Level Domain : ${oneCountryData[0].tld[0]}</p>
                   
-                     <p class="secondBlock__population">Languages : Dutch, French, German</p>
+                     <p class="secondBlock__population">Languages : <span> ${ita, fra} </p>
                 </div>
             </article>
            `;
