@@ -1,4 +1,6 @@
-*, ::after, ::before {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -77,11 +79,13 @@ body {
 
 .countryInformations {
   display: flex;
+  justify-content: space-between;
+  width: 500px;
 }
 .countryInformations .secondBlock {
   margin-top: 45px;
 }
-.countryInformations .secondBlock h1 {
+.countryInformations .firstBlock__title {
   margin-bottom: 25px;
 }
 .countryInformations .firstBlock p,

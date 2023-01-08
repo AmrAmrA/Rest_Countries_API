@@ -67,16 +67,15 @@ body {
 
 .countryInformations {
   display: flex;
-
+  justify-content: space-between;
+  width: 500px;
   .secondBlock {
     margin-top: 45px;
-
-    h1 {
-      margin-bottom: 25px;
-    }
+  }
+  .firstBlock__title {
+    margin-bottom: 25px;
   }
 
-  
   .firstBlock p,
   .secondBlock p {
     margin-bottom: 12px;
