@@ -25,7 +25,16 @@ const DisplayCountries = async () => {
   let frontieres = [];
   let langues = [];
   langues = { ...oneCountryData[0].languages };
-  frontieres = [...oneCountryData[0].borders];
+  
+  if(oneCountryData[0].borders) {
+    frontieres = [...oneCountryData[0].borders];
+  } else {
+    frontieres = 'We have no border countries '; 
+  }
+  console.log(frontieres);
+  for (pays of frontieres) {
+    console.log(pays);
+  }
 
   OneCountrySection.innerHTML = `
               <article class="countryFlag">
@@ -47,7 +56,7 @@ const DisplayCountries = async () => {
                      <p class="firstBlock__subRegion"> <b> Sub Region </b> : ${
                        oneCountryData[0].subregion
                      }</p>
-                     <p class="firstBlock__capital"><b> Sub Region </b> : ${
+                     <p class="firstBlock__capital"><b> Capital </b> : ${
                        oneCountryData[0].capital[0]
                      }</p>
                      <div class="thirdBlock">
