@@ -22,13 +22,13 @@ let population      = document.querySelector(".firstBlock__populationNumber");
 let subregion       = document.querySelector(".firstBlock__subregionName");
 let region          = document.querySelector(".firstBlock__regionName");
 let levelDomain     = document.querySelector(".secondBlock__levelDomainName");
-let currencyName    = document.querySelector(".secondBlock__currenciesName");
+let currencyName    = document.querySelector(".secondBlock__currencies");
 
 
 let mainBlock = document.querySelector("main");
 const DisplayCountries = async () => {
   await getOneCountry();
-  console.log(oneCountryData[0].currencies);
+
   countryFlag.src         = oneCountryData[0].flags.svg;
   countryTitle.innerHTML  = oneCountryData[0].name.common;
   nativeName.innerHTML    = oneCountryData[0].name.common;
@@ -36,7 +36,18 @@ const DisplayCountries = async () => {
   region.innerHTML        = oneCountryData[0].region;
   subregion.innerHTML     = oneCountryData[0].subregion;
   levelDomain.innerHTML   = oneCountryData[0].tld[0];
-  currencyName.innerHTML  = oneCountryData[0].currencies[0];
+  // Some countries have more than one currency so I need to create a loop to display all of them
+  let objectValues = Object.values(oneCountryData[0].currencies);
+  console.log(objectValues);
+  for (let i = 0; i < objectValues.length; i++) {
+    let spanMoney = document.createElement("span");
+    console.log(objectValues.length);
+    if (i == objectValues.length - 1) {
+      spanMoney.innerHTML = objectValues[i].name;
+    } else {
+      spanMoney.innerHTML = objectValues[i].name +','; }
+      currencyName.appendChild(spanMoney);
+    };
 };
 DisplayCountries();
 
