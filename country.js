@@ -24,12 +24,14 @@ let region          = document.querySelector(".firstBlock__regionName");
 let levelDomain     = document.querySelector(".secondBlock__levelDomainName");
 let currencyName    = document.querySelector(".secondBlock__currencies");
 let languageName    = document.querySelector(".secondBlock__languages");
+let countriesBlock  = document.querySelector(".thirdBlock__countries");
+let capitalName     = document.querySelector(".firstBlock__capitalName");
+
 
 
 let mainBlock = document.querySelector("main");
 const DisplayCountries = async () => {
   await getOneCountry();
-  console.log(oneCountryData);
   countryFlag.src         = oneCountryData[0].flags.svg;
   countryTitle.innerHTML  = oneCountryData[0].name.common;
   nativeName.innerHTML    = oneCountryData[0].name.common;
@@ -37,6 +39,7 @@ const DisplayCountries = async () => {
   region.innerHTML        = oneCountryData[0].region;
   subregion.innerHTML     = oneCountryData[0].subregion;
   levelDomain.innerHTML   = oneCountryData[0].tld[0];
+  capitalName.innerHTML   = oneCountryData[0].capital[0];
   // Some countries have more than one currency so I need to create a loop to display all of them
   let objectValues = Object.values(oneCountryData[0].currencies);
   for (let i = 0; i < objectValues.length; i++) {
@@ -57,6 +60,19 @@ const DisplayCountries = async () => {
       spanLanguage.innerHTML = `${languaguesValues[i]},` }
       languageName.appendChild(spanLanguage);
     }
+    console.log(oneCountryData[0]);
+    if (!oneCountryData[0].borders) {
+      countriesBlock.innerHTML = "No border countries"; } 
+      else {
+    let borderCountries = Object.values(oneCountryData[0].borders);
+    for (let i = 0; i < borderCountries.length; i++) { 
+      let countryLink = document.createElement("a");
+      countryLink.href = `country.html?id=${borderCountries[i]}`;
+      let countryButton = document.createElement("button");
+      countryButton.innerHTML = borderCountries[i];
+      countryLink.appendChild(countryButton);
+      countriesBlock.appendChild(countryLink);
+    }}
 };
 DisplayCountries();
 
