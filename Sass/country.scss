@@ -67,8 +67,14 @@ body {
 
 .countryInformations {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   width: 500px;
+
+  .row__blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .secondBlock {
     margin-top: 45px;
   }
@@ -83,7 +89,26 @@ body {
 
   .thirdBlock {
     margin-top: 80px;
+    display: flex; 
+    align-items: center;
+    flex-wrap: wrap;
   }
+}
+
+.thirdBlock { 
+     &__title {
+      font-weight: 600;
+     }
+    button {
+      margin: 0px 5px; 
+      padding: 9px 10px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      background-color: #fff;
+      border: 1px solid rgb(231, 211, 211);
+      box-shadow: 2px 3px 6px 0px rgba(0, 0, 0, 0.20);
+    }
 }
 
 @import "__queries.scss";

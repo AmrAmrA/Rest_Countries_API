@@ -15,10 +15,6 @@ a {
   color: black;
 }
 
-a:visited {
-  color: white;
-}
-
 body {
   font-family: "Nunito Sans", sans-serif;
   background-color: #fafafa;

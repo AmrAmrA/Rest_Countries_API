@@ -32,14 +32,66 @@
         <p class="darkMode__text">Dark Mode</p>
       </div>
     </header>
-
     <main class="main">
-        <button class="main__back">
-            <div class="arrow">
-                <i class="fa-solid fa-arrow-left-long"></i>
+      <button class="main__back">
+        <div class="arrow">
+          <i class="fa-solid fa-arrow-left-long"></i>
+        </div>
+        <p class="back">Back</p>
+      </button>
+      <section class="countryBlock">
+        <article class="countryFlag">
+          <img
+            src="/Flag__Germany.png"
+            alt="Germany flag"
+            srcset=""
+            class="countryFlag__photo"
+          />
+        </article>
+        <article class="countryInformations">
+          <div class="row__blocks">
+            <div class="firstblock">
+              <h1 class="firstblock__title"></h1>
+              <p class="firstBlock__native">Native Name : <span class="firstBlock__nativeName"></span></p>
+              <p class="firstblock__population">Population: <span class="firstBlock__populationNumber"></span></p>
+              <p class="firstBlock__region">Region : <span class="firstBlock__regionName">
+              
+              </span></p>
+              <p class="firstBlock__subRegion">Sub Region : <span class="firstBlock__subregionName">
+              
+              </span>
+            </p>
+              <p class="firstBlock__capital"> Capital : Brussels</p>
             </div>
-            <p class="back">Back</p>
-        </button>
+  
+            <div class="secondBlock">
+              <p class="secondBlock__levelDomain">Top Level Domain : <span class="secondBlock__levelDomainName"></span></p>
+              <p class="secondBlock__currencies">Currencies : <span class="secondBlock__currenciesName"></span></p>
+              <p class="secondBlock__languauges">
+                Languages : Dutch, French, German
+              </p>
+            </div>
+          </div>
+
+          <div class="thirdBlock">
+            <p class="thirdBlock__title">Border Countries :</p>
+            <div class="thirdBlock__countries">
+              <a href="">
+                <button class="thirdBlock__country">France</button>
+              </a>
+              <a href="">
+                <button class="thirdBlock__country">Germany</button>
+              </a>
+              <a href="">
+                <button class="thirdBlock__country">Netherlands</button>
+              </a>
+              <a href="">
+                <button class="thirdBlock__country">Luxembourg</button>
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
   </body>
   <script src="country.js"></script>
