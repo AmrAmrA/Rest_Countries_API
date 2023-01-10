@@ -68,24 +68,29 @@ body {
 .countryInformations {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 750px;
 
   .row__blocks {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
-  .secondBlock {
-    margin-top: 45px;
-  }
-  .firstBlock__title {
-    margin-bottom: 25px;
+
+    .firstBlock {
+      width: 60%;
+    }
+    .secondBlock {
+      margin-top: 45px;
+    }
+    .firstblock__title {
+      margin-bottom: 25px;
+    }
+
+    .firstBlock p,
+    .secondBlock p {
+      margin-bottom: 12px;
+    }
   }
 
-  .firstBlock p,
-  .secondBlock p {
-    margin-bottom: 12px;
-  }
 
   .thirdBlock {
     margin-top: 80px;
@@ -95,6 +100,16 @@ body {
   }
 }
 
+
+.secondBlock__languages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+   span {
+    margin-right: 8px;
+  }
+}
 .secondBlock__currencies span {
   margin-right: 5px;
 }

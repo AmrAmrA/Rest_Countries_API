@@ -16,19 +16,20 @@ const getOneCountry = async () => {
 };
 
 let countryFlag     = document.querySelector(".countryFlag__photo");
-let countryTitle    = document.querySelector(".firstblock__title");
+let countryTitle    = document.querySelector(".firstBlock__title");
 let nativeName      = document.querySelector(".firstBlock__nativeName");
 let population      = document.querySelector(".firstBlock__populationNumber");
 let subregion       = document.querySelector(".firstBlock__subregionName");
 let region          = document.querySelector(".firstBlock__regionName");
 let levelDomain     = document.querySelector(".secondBlock__levelDomainName");
 let currencyName    = document.querySelector(".secondBlock__currencies");
+let languageName    = document.querySelector(".secondBlock__languages");
 
 
 let mainBlock = document.querySelector("main");
 const DisplayCountries = async () => {
   await getOneCountry();
-
+  console.log(oneCountryData);
   countryFlag.src         = oneCountryData[0].flags.svg;
   countryTitle.innerHTML  = oneCountryData[0].name.common;
   nativeName.innerHTML    = oneCountryData[0].name.common;
@@ -38,16 +39,24 @@ const DisplayCountries = async () => {
   levelDomain.innerHTML   = oneCountryData[0].tld[0];
   // Some countries have more than one currency so I need to create a loop to display all of them
   let objectValues = Object.values(oneCountryData[0].currencies);
-  console.log(objectValues);
   for (let i = 0; i < objectValues.length; i++) {
     let spanMoney = document.createElement("span");
-    console.log(objectValues.length);
     if (i == objectValues.length - 1) {
       spanMoney.innerHTML = objectValues[i].name;
     } else {
-      spanMoney.innerHTML = objectValues[i].name +','; }
+      spanMoney.innerHTML =  `${objectValues[i].name},` }
       currencyName.appendChild(spanMoney);
     };
+  // Some countries have more than one language so I need to create a loop to display all of them
+  let languaguesValues = Object.values(oneCountryData[0].languages);
+  for (let i = 0; i < languaguesValues.length; i++) {
+    let spanLanguage = document.createElement("span");
+    if (i == languaguesValues.length - 1) {
+      spanLanguage.innerHTML = languaguesValues[i];
+    } else {
+      spanLanguage.innerHTML = `${languaguesValues[i]},` }
+      languageName.appendChild(spanLanguage);
+    }
 };
 DisplayCountries();
 
