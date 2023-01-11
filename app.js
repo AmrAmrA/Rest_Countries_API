@@ -16,6 +16,7 @@ const getCountries = async () => {
 
 const DisplayCountries = async () => {
   await getCountries();
+  console.log(countryData);
   for (let i = 0; i < countryData.length; i++) {
     const countriesSection = document.createElement("section");
 

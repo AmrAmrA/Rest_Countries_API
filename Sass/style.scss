@@ -29,6 +29,45 @@ body {
   }
 }
 
+
+.search__methods {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px 0px 40px;
+
+  .search__container {
+    position: relative;
+    .fa-solid {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+    }
+  
+    input {
+      width: 300px;
+      height: 40px;
+      border: none;
+      padding: 0px 10px 0px 50px;
+      font-size: 16px;
+      outline: none;
+      background-color: white;
+      box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.65);
+      border-radius: 15px;
+    }
+  }
+
+  .regions__options {
+    width: 180px;
+    padding: 13px 10px; 
+    background-color: white;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.35);
+  }
+  
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -75,7 +114,7 @@ main {
   }
 }
 
-.darkMode {
+.darkModeToggle {
   background-color: #202c37;
   color: white; 
 }
