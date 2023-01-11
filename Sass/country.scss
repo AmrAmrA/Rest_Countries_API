@@ -41,7 +41,7 @@ body {
     cursor: pointer;
     outline: none;
     border: none;
-    background-color: white;
+    background-color: $white;
     border-radius: 2px;
     box-shadow: 0px 3px 1px 4px rgba(0, 0, 0, 0.71);
 
@@ -128,7 +128,7 @@ body {
       margin-top: 5px;
      }
     button {
-      margin: 0px 5px; 
+      margin: 5px; 
       padding: 9px 10px;
       text-align: center;
       cursor: pointer;
@@ -138,6 +138,12 @@ body {
       box-shadow: 2px 3px 6px 0px rgba(0, 0, 0, 0.20);
     }
 }
+
+.darkModeToggle {
+  background-color: #202c37;
+  color: white;
+}
+
 
 
 @media screen and (max-width: 1150px) {
@@ -174,7 +180,7 @@ body {
 
     &__title {
       margin-left: 0px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
   }
 }

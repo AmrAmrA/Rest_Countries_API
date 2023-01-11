@@ -60,6 +60,8 @@ const DisplayCountries = async () => {
       spanLanguage.innerHTML = `${languaguesValues[i]},` }
       languageName.appendChild(spanLanguage);
     }
+
+  // Some countries have more than one border country so I need to create a loop to display all of them or display a message if there is no border country
     console.log(oneCountryData[0]);
     if (!oneCountryData[0].borders) {
       countriesBlock.innerHTML = "No border countries"; } 
@@ -83,3 +85,14 @@ DisplayCountries();
 
 let buttonBack = document.querySelector(".main__back");
 buttonBack.addEventListener("click", () => {window.location = "index.html";});
+
+let header = document.querySelector("header");
+let darkMode = document.querySelector(".darkMode");
+console.log(darkMode);
+
+  darkMode.addEventListener("click", () => {
+    (document.body.classList.toggle("darkModeToggle"));
+    (header.classList.toggle("darkModeToggle"));
+  });
+  
+

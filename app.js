@@ -40,11 +40,10 @@ const DisplayCountries = async () => {
 DisplayCountries();
 
 let darkMode = document.querySelector(".darkMode");
-let body = document.querySelector("body");
 let countryCard = document.querySelectorAll(".countryCard");
 let countryInformations = document.querySelectorAll(".countryInformations");
-console.log(countryInformations);
+console.log(mainPart.children);
 
 darkMode.addEventListener("click", () => {
-  body.classList.toggle("darkMode");
+  document.body.classList.toggle("darkModeToggle");
 });
