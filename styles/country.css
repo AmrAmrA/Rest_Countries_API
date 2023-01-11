@@ -67,20 +67,20 @@ body {
   margin-top: 35px;
 }
 .countryBlock .countryFlag {
-  width: 500px;
+  width: 400px;
 }
 .countryBlock .countryFlag__photo {
   width: 100%;
-  height: 400px;
   object-fit: cover;
-  border-radius: 35px;
+  height: 280px;
+  min-width: 380px;
 }
 
 .countryInformations {
   display: flex;
   flex-direction: column;
   width: 750px;
-  margin-top: 60px;
+  margin-top: 25px;
 }
 .countryInformations .row__blocks {
   display: flex;
@@ -98,7 +98,7 @@ body {
 }
 .countryInformations .row__blocks .firstBlock p,
 .countryInformations .row__blocks .secondBlock p {
-  margin-bottom: 12px;
+  margin-bottom: 7px;
   font-weight: 900;
 }
 .countryInformations .row__blocks .firstBlock span,
@@ -107,7 +107,7 @@ body {
   margin-left: 6px;
 }
 .countryInformations .thirdBlock {
-  margin-top: 80px;
+  margin-top: 8px;
   margin-left: 42px;
   display: flex;
   align-items: center;
@@ -139,6 +139,29 @@ body {
   margin-top: 4px;
   font-weight: 900;
 }
+
+@media screen and (max-width: 1250px)  { 
+  .countryInformations {
+    width: auto; 
+  }
+  .secondBlock {
+    width: 60%;
+  }
+  .countryBlock {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .countryBlock .row__blocks {
+    flex-direction: column;
+    margin: 0px 0px;
+    align-items: center;
+  }
+  .countryInformations .thirdBlock {
+    margin: 14px 0px 14px 130px;
+  }
+}
+
 
 @media screen and (max-width: 485px) {
   .header {
