@@ -81,13 +81,19 @@ body {
     .secondBlock {
       margin-top: 45px;
     }
-    .firstblock__title {
-      margin-bottom: 25px;
+    .firstBlock__title {
+      margin-bottom: 20px;
     }
 
     .firstBlock p,
     .secondBlock p {
       margin-bottom: 12px;
+      font-weight: 900;
+    }
+    .firstBlock span,
+    .secondBlock span {
+      font-weight: 400;
+      margin-left: 6px;
     }
   }
 
@@ -106,13 +112,8 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 10px;
-   span {
-    margin-right: 8px;
-  }
 }
-.secondBlock__currencies span {
-  margin-right: 5px;
-}
+
 .thirdBlock { 
      &__title {
       font-weight: 600;

@@ -10,7 +10,7 @@ const getOneCountry = async () => {
       throw new Error("Erreur Serveur");
     }
   } catch (e) {
-    alert("Sorry, problem with Fetch");
+    alert("Sorry, probably the country doesn't exist in our database.");
     return;
   }
 };
