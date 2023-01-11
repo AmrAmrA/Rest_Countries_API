@@ -36,14 +36,38 @@ const DisplayCountries = async () => {
     mainPart.appendChild(countriesSection);
   }
 };
-
+console.log
 DisplayCountries();
 
+
+
+
+
+
+
+
+
+
+// Dark Mode Toggle
 let darkMode = document.querySelector(".darkMode");
+let body = document.querySelector("body");
 let countryCard = document.querySelectorAll(".countryCard");
 let countryInformations = document.querySelectorAll(".countryInformations");
-console.log(mainPart.children);
-
+let header = document.querySelector("header");
+let toggleTheme = true; 
+document.styleSheets[0].cssRules[9].style.color = "black";
 darkMode.addEventListener("click", () => {
-  document.body.classList.toggle("darkModeToggle");
+    if(toggleTheme) {
+    body.classList.add("darkModeToggle");
+    header.classList.add("darkModeToggle");
+    document.styleSheets[0].cssRules[9].style.color = "white"; 
+    toggleTheme = false; 
+  }
+    else {
+      body.classList.remove("darkModeToggle");
+      header.classList.remove("darkModeToggle");
+      document.styleSheets[0].cssRules[9].style.color = "black";
+      toggleTheme = true;
+    }
 });
+  
