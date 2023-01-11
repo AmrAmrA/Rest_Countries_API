@@ -67,38 +67,40 @@ body {
   margin-top: 35px;
 }
 .countryBlock .countryFlag {
-  width: 400px;
+  width: 300px;
 }
 .countryBlock .countryFlag__photo {
   width: 100%;
+  min-width: 300px;
+  height: 240px;
   object-fit: cover;
-  height: 280px;
-  min-width: 380px;
 }
 
 .countryInformations {
   display: flex;
   flex-direction: column;
   width: 750px;
-  margin-top: 25px;
 }
 .countryInformations .row__blocks {
   display: flex;
   flex-direction: row;
-  margin: 0 42px;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 .countryInformations .row__blocks .firstBlock {
-  width: 60%;
+  width: 300px;
 }
 .countryInformations .row__blocks .secondBlock {
   margin-top: 45px;
+  width: 200px;
 }
 .countryInformations .row__blocks .firstBlock__title {
   margin-bottom: 20px;
 }
 .countryInformations .row__blocks .firstBlock p,
 .countryInformations .row__blocks .secondBlock p {
-  margin-bottom: 7px;
+  margin-bottom: 12px;
   font-weight: 900;
 }
 .countryInformations .row__blocks .firstBlock span,
@@ -107,8 +109,7 @@ body {
   margin-left: 6px;
 }
 .countryInformations .thirdBlock {
-  margin-top: 8px;
-  margin-left: 42px;
+  margin-top: 40px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -124,6 +125,8 @@ body {
 .thirdBlock__title {
   font-weight: 600;
   margin-right: 10px;
+  margin-left: 85px;
+  margin-top: 5px;
 }
 .thirdBlock button {
   margin: 0px 5px;
@@ -135,34 +138,41 @@ body {
   border: 1px solid rgb(231, 211, 211);
   box-shadow: 2px 3px 6px 0px rgba(0, 0, 0, 0.2);
 }
-.thirdBlock p {
-  margin-top: 4px;
-  font-weight: 900;
-}
 
-@media screen and (max-width: 1250px)  { 
-  .countryInformations {
-    width: auto; 
+@media screen and (max-width: 1150px) {
+  .countryInformations .row__blocks {
+    justify-content: space-between;
   }
-  .secondBlock {
-    width: 60%;
+  .thirdBlock__title {
+    margin-left: 35px;
   }
+}
+@media screen and (max-width: 910px) {
   .countryBlock {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
-  .countryBlock .row__blocks {
+  .countryInformations {
+    width: auto;
+  }
+  .countryInformations .row__blocks {
+    margin-left: 0px;
     flex-direction: column;
-    margin: 0px 0px;
     align-items: center;
   }
-  .countryInformations .thirdBlock {
-    margin: 14px 0px 14px 130px;
+  .countryInformations .row__blocks .secondBlock {
+    width: 300px;
+  }
+  .thirdBlock {
+    display: flex;
+    width: 300px;
+    justify-content: flex-start;
+  }
+  .thirdBlock__title {
+    margin-left: 0px;
+    margin-bottom: 10px;
   }
 }
-
-
 @media screen and (max-width: 485px) {
   .header {
     padding: 20px 8px 20px 8px;
