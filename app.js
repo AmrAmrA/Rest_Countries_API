@@ -71,4 +71,38 @@ darkMode.addEventListener("click", () => {
       toggleTheme = true;
     }
 });
-  
+
+
+// Search Bar
+let countrySearch = document.querySelector(".search_input");
+console.log(countrySearch);
+countrySearch.addEventListener("keyup", (e) => { 
+  let searchValue = e.target.value.toLowerCase();
+  console.log(searchValue);
+  let countryCard = document.querySelectorAll(".countryCard");
+  countryCard.forEach((country) => {
+    let countryName = country.querySelector(".countryInformations__name").innerText.toLowerCase();
+    if(countryName.includes(searchValue)) {
+      country.style.display = "block";
+    }
+    else {
+      country.style.display = "none";
+    }
+  });
+});
+
+// Filter by Region
+let regionFilter = document.querySelector(".regions__options");
+regionFilter.addEventListener("change", (e) => {
+  let regionValue = e.target.value.toLowerCase();
+  let countryCard = document.querySelectorAll(".countryCard");
+  countryCard.forEach((country) => {
+    let countryRegion = country.querySelector(".countryInformations__region").innerText.toLowerCase();
+    if(countryRegion.includes(regionValue)) {
+      country.style.display = "block";
+    }
+    else {
+      country.style.display = "none";
+    }
+  });
+});
