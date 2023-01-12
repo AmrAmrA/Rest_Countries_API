@@ -178,6 +178,23 @@ body {
     margin-bottom: 5px;
   }
 }
+@media screen and (max-width: 740px) {
+  .search__methods {
+    flex-direction: column;
+  }
+  .select__text {
+    display: flex;
+    align-self: flex-start;
+  }
+  .select__options {
+    display: flex;
+    align-self: flex-start;
+    margin-top: 55px;
+  }
+  .search__methods .search__container input {
+    width: 260px;
+  }
+}
 @media screen and (max-width: 485px) {
   .header {
     padding: 20px 8px 20px 8px;

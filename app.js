@@ -50,6 +50,9 @@ DisplayCountries();
 
 
 // Dark Mode Toggle
+console.log(document.styleSheets[0].cssRules[2]); 
+let countrySearch = document.querySelector(".search_input");
+let regionFilter = document.querySelector(".regions__options");
 let darkMode = document.querySelector(".darkMode");
 let body = document.querySelector("body");
 let countryCard = document.querySelectorAll(".countryCard");
@@ -58,23 +61,26 @@ let header = document.querySelector("header");
 let toggleTheme = true; 
 document.styleSheets[0].cssRules[9].style.color = "black";
 darkMode.addEventListener("click", () => {
-    if(toggleTheme) {
+  if(toggleTheme) {
     body.classList.add("darkModeToggle");
     header.classList.add("darkModeToggle");
-    document.styleSheets[0].cssRules[9].style.color = "white"; 
+    countrySearch.classList.add("darkModeToggle");
+    regionFilter.classList.add("darkModeToggle");
+    document.styleSheets[0].cssRules[2].style.color = "white"; 
     toggleTheme = false; 
   }
-    else {
+  else {
       body.classList.remove("darkModeToggle");
       header.classList.remove("darkModeToggle");
-      document.styleSheets[0].cssRules[9].style.color = "black";
+      countrySearch.classList.remove("darkModeToggle");
+      regionFilter.classList.remove("darkModeToggle");
+      document.styleSheets[0].cssRules[2].style.color = "black";
       toggleTheme = true;
     }
 });
 
 
 // Search Bar
-let countrySearch = document.querySelector(".search_input");
 console.log(countrySearch);
 countrySearch.addEventListener("keyup", (e) => { 
   let searchValue = e.target.value.toLowerCase();
@@ -92,7 +98,6 @@ countrySearch.addEventListener("keyup", (e) => {
 });
 
 // Filter by Region
-let regionFilter = document.querySelector(".regions__options");
 regionFilter.addEventListener("change", (e) => {
   let regionValue = e.target.value.toLowerCase();
   let countryCard = document.querySelectorAll(".countryCard");
